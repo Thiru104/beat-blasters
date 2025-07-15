@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEAT BUSTERS DANCE CENTER</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-music me-2"></i>BEAT BUSTERS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#programs">Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#enquiry">Enquiry</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="hero-image"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col-lg-8 mx-auto text-center text-white">
+                    <h1 class="display-1 fw-bold mb-4" data-aos="fade-up">
+                        BEAT BUSTERS<br>
+                        <span class="text-danger">DANCE CENTER</span>
+                    </h1>
+                    <p class="lead mb-5" data-aos="fade-up" data-aos-delay="200">
+                        Where passion meets rhythm, and dreams take flight through the art of dance
+                    </p>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#programs" class="btn btn-danger btn-lg me-3">Explore Programs</a>
+                        <a href="#enquiry" class="btn btn-outline-light btn-lg">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dance-silhouettes">
+            <div class="silhouette silhouette-1"></div>
+            <div class="silhouette silhouette-2"></div>
+            <div class="silhouette silhouette-3"></div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-4 fw-bold text-danger" data-aos="fade-up">Our Programs</h2>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="200">Discover your passion with our diverse range of programs</p>
+                </div>
+            </div>
+
+            <!-- Dance Programs -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="text-center mb-4" data-aos="fade-up">
+                        <i class="fas fa-music text-danger me-2"></i>DANCE PROGRAMS
+                    </h3>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/adult-1867485_1280.jpg" alt="Western Dance" class="img-fluid">
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-boot"></i>
+                        </div>
+                        <h5>Western Dance</h5>
+                        <p class="program-description">Learn contemporary and classical western dance forms</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="https://cdn.pixabay.com/photo/2017/08/06/00/07/people-2583493_1280.jpg" alt="Bollywood" class="img-fluid">
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5>Bollywood</h5>
+                        <p class="program-description">Express yourself through vibrant Bollywood dance moves</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/29/03/35/adult-1867743_1280.jpg" alt="Hip Hop" class="img-fluid">
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <h5>Hip Hop</h5>
+                        <p class="program-description">Master the art of hip hop and street dance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="https://cdn.pixabay.com/photo/2017/08/01/08/29/people-2563491_1280.jpg" alt="B-Boying" class="img-fluid">
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-spinner"></i>
+                        </div>
+                        <h5>B-Boying</h5>
+                        <p class="program-description">Learn breakdancing and acrobatic moves</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/adult-1867485_1280.jpg" alt="Popping & Locking" class="img-fluid">
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-hand-paper"></i>
+                        </div>
+                        <h5>Popping & Locking</h5>
+                        <p class="program-description">Master the techniques of popping and locking</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/adult-1867485_1280.jpg" alt="Folk Dance" class="img-fluid">
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h5>Folk Dance</h5>
+                        <p class="program-description">Explore traditional folk dance forms</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="https://cdn.pixabay.com/photo/2017/08/06/00/07/people-2583493_1280.jpg" alt="Bharatanatyam" class="img-fluid">
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-pray"></i>
+                        </div>
+                        <h5>Bharatanatyam</h5>
+                        <p class="program-description">Learn classical Indian dance form</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Art Programs -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="text-center mb-4" data-aos="fade-up">
+                        <i class="fas fa-palette text-danger me-2"></i>ART PROGRAMS
+                    </h3>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/29/09/16/adult-1867481_1280.jpg" alt="Sketching" class="img-fluid">
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <h5>Sketching</h5>
+                        <p class="program-description">Develop your drawing and sketching skills</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/abacus-1998846_1280.jpg" alt="Abacus" class="img-fluid">
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h5>Abacus</h5>
+                        <p class="program-description">Enhance mental arithmetic skills</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/29/09/16/adult-1867481_1280.jpg" alt="Painting" class="img-fluid">
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h5>Painting</h5>
+                        <p class="program-description">Express creativity through various painting techniques</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/abacus-1998846_1280.jpg" alt="Water Colouring" class="img-fluid">
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h5>Water Colouring</h5>
+                        <p class="program-description">Master the art of watercolor painting</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fitness Programs -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="text-center mb-4" data-aos="fade-up">
+                        <i class="fas fa-dumbbell text-danger me-2"></i>FITNESS PROGRAMS
+                    </h3>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/adult-1867485_1280.jpg" alt="Aerobics" class="img-fluid">
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h5>Aerobics</h5>
+                        <p class="program-description">Stay fit with energetic aerobic exercises</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/adult-1867485_1280.jpg" alt="Zumba" class="img-fluid">
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h5>Zumba</h5>
+                        <p class="program-description">Dance your way to fitness with Zumba</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/adult-1867485_1280.jpg" alt="Martial Art" class="img-fluid">
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-fist-raised"></i>
+                        </div>
+                        <h5>Martial Art</h5>
+                        <p class="program-description">Learn self-defense and discipline</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/adult-1867485_1280.jpg" alt="Artistic Yoga" class="img-fluid">
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-praying-hands"></i>
+                        </div>
+                        <h5>Artistic Yoga</h5>
+                        <p class="program-description">Find balance through artistic yoga practices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-4 fw-bold text-danger" data-aos="fade-up">Additional Services</h2>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="200">Professional services for all your entertainment needs</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/adult-1867485_1280.jpg" alt="Movie Choreography" class="img-fluid">
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h5>MOVIE</h5>
+                        <p>Professional choreography for movies and films</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://cdn.pixabay.com/photo/2017/08/06/00/07/people-2583493_1280.jpg" alt="Ad Shoot" class="img-fluid">
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h5>AD SHOOT</h5>
+                        <p>Creative dance sequences for advertisements</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/adult-1867485_1280.jpg" alt="Corporate Choreography" class="img-fluid">
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h5>CORPORATE CHOREOGRAPHY</h5>
+                        <p>Team building through dance and movement</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://cdn.pixabay.com/photo/2017/08/01/08/29/people-2563491_1280.jpg" alt="Dance Event" class="img-fluid">
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h5>DANCE EVENT</h5>
+                        <p>Complete event management and performances</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://cdn.pixabay.com/photo/2017/08/06/00/07/people-2583493_1280.jpg" alt="Wedding & Sangeeth" class="img-fluid">
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h5>WEDDING & SANGEETH</h5>
+                        <p>Special performances for your special day</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://cdn.pixabay.com/photo/2017/08/01/08/29/people-2563491_1280.jpg" alt="Dance Concerts" class="img-fluid">
+                        </div>
+                        <div class="service-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h5>DANCE CONCERTS</h5>
+                        <p>Spectacular dance concerts and shows</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mx-auto" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/adult-1867485_1280.jpg" alt="YouTube Choreography" class="img-fluid">
+                        </div>
+                        <div class="service-icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <h5>YOUTUBE CHOREOGRAPHY</h5>
+                        <p>Viral dance choreography for social media</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Form Section -->
+    <section id="enquiry" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-4 fw-bold text-danger" data-aos="fade-up">Enquire Now</h2>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="200">Get detailed information about our programs and services</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="enquiry-form-container" data-aos="fade-up">
+                        <form id="enquiryForm" action="php/enquiry.php" method="POST">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="enquiryName" class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="enquiryName" name="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="enquiryEmail" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="enquiryEmail" name="email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="enquiryPhone" class="form-label">Phone Number *</label>
+                                    <input type="tel" class="form-control" id="enquiryPhone" name="phone" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="enquiryAge" class="form-label">Age</label>
+                                    <input type="number" class="form-control" id="enquiryAge" name="age" min="3" max="80">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="enquiryCategory" class="form-label">Program Category *</label>
+                                    <select class="form-control" id="enquiryCategory" name="category" required>
+                                        <option value="">Select Category</option>
+                                        <option value="dance">Dance Programs</option>
+                                        <option value="art">Art Programs</option>
+                                        <option value="fitness">Fitness Programs</option>
+                                        <option value="services">Additional Services</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="enquiryProgram" class="form-label">Specific Program</label>
+                                    <select class="form-control" id="enquiryProgram" name="program">
+                                        <option value="">Select Program</option>
+                                        <!-- Options will be populated by JavaScript -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="enquiryMessage" class="form-label">Additional Information</label>
+                                <textarea class="form-control" id="enquiryMessage" name="message" rows="4" placeholder="Tell us about your interests, experience level, or any specific requirements..."></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Preferred Contact Time</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="contactTime" id="morning" value="morning">
+                                            <label class="form-check-label" for="morning">Morning (9 AM - 12 PM)</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="contactTime" id="afternoon" value="afternoon">
+                                            <label class="form-check-label" for="afternoon">Afternoon (12 PM - 5 PM)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="contactTime" id="evening" value="evening">
+                                            <label class="form-check-label" for="evening">Evening (5 PM - 9 PM)</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="contactTime" id="anytime" value="anytime" checked>
+                                            <label class="form-check-label" for="anytime">Anytime</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-danger btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>Submit Enquiry
+                                </button>
+                            </div>
+                        </form>
+                        <div id="enquiryMessage" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-4 fw-bold text-danger" data-aos="fade-up">Contact Us</h2>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="200">Get in touch with us to start your dance journey</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-up">
+                    <div class="contact-info">
+                        <h4 class="text-danger mb-4">Get In Touch</h4>
+                        <div class="contact-item mb-3">
+                            <i class="fas fa-phone text-danger me-3"></i>
+                            <div>
+                                <strong>Phone Numbers:</strong><br>
+                                <a href="tel:7483283045" class="text-decoration-none">74832 83045</a><br>
+                                <a href="tel:8553893851" class="text-decoration-none">85538 93851</a>
+                            </div>
+                        </div>
+                        <div class="contact-item mb-3">
+                            <i class="fas fa-map-marker-alt text-danger me-3"></i>
+                            <div>
+                                <strong>Address:</strong><br>
+                                Opposite To Canara Bank,<br>
+                                Hosur Main Road,<br>
+                                Bangalore - 68
+                            </div>
+                        </div>
+                        <div class="contact-item mb-3">
+                            <i class="fas fa-clock text-danger me-3"></i>
+                            <div>
+                                <strong>Timings:</strong><br>
+                                Monday - Saturday: 9:00 AM - 9:00 PM<br>
+                                Sunday: 10:00 AM - 6:00 PM
+                            </div>
+                        </div>
+                        <div class="contact-item mb-3">
+                            <i class="fas fa-envelope text-danger me-3"></i>
+                            <div>
+                                <strong>Email:</strong><br>
+                                <a href="mailto:info@beatbusters.com" class="text-decoration-none">info@beatbusters.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-form">
+                        <h4 class="text-danger mb-4">Send us a Message</h4>
+                        <form id="contactForm" action="php/sendmail.php" method="POST">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-danger btn-lg w-100">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </form>
+                        <div id="formMessage" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="text-danger">BEAT BUSTERS DANCE CENTER</h5>
+                    <p class="mb-0">Where passion meets rhythm, and dreams take flight through the art of dance.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">&copy; 2024 Beat Busters Dance Center. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Chatbot Button -->
+    <div class="whatsapp-chatbot" id="whatsappChatbot">
+        <div class="chatbot-button" onclick="openWhatsApp()">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="chatbot-tooltip">
+            Chat with us on WhatsApp!
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+</body>
+</html> 

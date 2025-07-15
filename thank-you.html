@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - BEAT BUSTERS DANCE CENTER</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        .thank-you-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary-black) 0%, #1a1a1a 50%, var(--primary-red) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .thank-you-content {
+            text-align: center;
+            color: var(--primary-white);
+            z-index: 2;
+            position: relative;
+        }
+        
+        .success-icon {
+            width: 120px;
+            height: 120px;
+            background: #28a745;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: successPulse 2s infinite;
+        }
+        
+        .success-icon i {
+            font-size: 3rem;
+            color: var(--primary-white);
+        }
+        
+        @keyframes successPulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 20px rgba(40, 167, 69, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+            }
+        }
+        
+        .thank-you-section h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .thank-you-section .lead {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .next-steps {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        .next-steps h3 {
+            color: var(--primary-red);
+            margin-bottom: 1.5rem;
+        }
+        
+        .step-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        
+        .step-item i {
+            color: var(--primary-red);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .action-buttons {
+            margin-top: 2rem;
+        }
+        
+        .action-buttons .btn {
+            margin: 0.5rem;
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .floating-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+        }
+        
+        .shape-1 {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .shape-2 {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+        
+        .shape-3 {
+            width: 100px;
+            height: 100px;
+            top: 30%;
+            right: 30%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-20px) rotate(120deg);
+            }
+            66% {
+                transform: translateY(-10px) rotate(240deg);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .thank-you-section h1 {
+                font-size: 2rem;
+            }
+            
+            .thank-you-section .lead {
+                font-size: 1.1rem;
+            }
+            
+            .success-icon {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .success-icon i {
+                font-size: 2.5rem;
+            }
+            
+            .next-steps {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-music me-2"></i>BEAT BUSTERS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#programs">Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#enquiry">Enquiry</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thank You Section -->
+    <section class="thank-you-section">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="thank-you-content">
+                        <div class="success-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        
+                        <h1>Thank You!</h1>
+                        <p class="lead">Your enquiry has been submitted successfully. We're excited to help you start your dance journey!</p>
+                        
+                        <div class="next-steps">
+                            <h3><i class="fas fa-list-check me-2"></i>What Happens Next?</h3>
+                            <div class="step-item">
+                                <i class="fas fa-clock"></i>
+                                <span>We'll review your enquiry within 24 hours</span>
+                            </div>
+                            <div class="step-item">
+                                <i class="fas fa-phone"></i>
+                                <span>Our team will contact you at your preferred time</span>
+                            </div>
+                            <div class="step-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>We'll schedule a consultation or trial class</span>
+                            </div>
+                            <div class="step-item">
+                                <i class="fas fa-star"></i>
+                                <span>Begin your amazing dance journey with us!</span>
+                            </div>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <a href="index.html" class="btn btn-outline-light">
+                                <i class="fas fa-home me-2"></i>Back to Home
+                            </a>
+                            <a href="index.html#programs" class="btn btn-danger">
+                                <i class="fas fa-music me-2"></i>Explore Programs
+                            </a>
+                            <a href="index.html#contact" class="btn btn-outline-light">
+                                <i class="fas fa-phone me-2"></i>Contact Us
+                            </a>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <p class="text-light opacity-75">
+                                <i class="fas fa-info-circle me-2"></i>
+                                If you have any urgent questions, feel free to call us directly at 
+                                <a href="tel:7483283045" class="text-danger">74832 83045</a> or 
+                                <a href="tel:8553893851" class="text-danger">85538 93851</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Chatbot Button -->
+    <div class="whatsapp-chatbot" id="whatsappChatbot">
+        <div class="chatbot-button" onclick="openWhatsApp()">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="chatbot-tooltip">
+            Chat with us on WhatsApp!
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+</body>
+</html> 

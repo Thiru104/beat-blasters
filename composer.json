@@ -1,0 +1,21 @@
+{
+    "name": "beatbusters/dance-center-website",
+    "description": "Modern website for Beat Busters Dance Center",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "BeatBusters\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Beat Busters Dance Center",
+            "email": "beatbusters@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true
+} 
