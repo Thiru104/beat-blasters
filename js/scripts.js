@@ -469,6 +469,55 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', optimizedScrollHandler);
 });
 
+// === GSAP Advanced Animations ===
+window.addEventListener('DOMContentLoaded', function() {
+    // HERO TEXT BOUNCE IN
+    if (window.gsap) {
+        const heroHeading = document.querySelector('.hero-section h1');
+        const heroLead = document.querySelector('.hero-section .lead');
+        const heroBtns = document.querySelectorAll('.hero-section .hero-btn-anim');
+        if (heroHeading && heroLead && heroBtns.length) {
+            gsap.set([heroHeading, heroLead, heroBtns], {opacity: 0, y: 40});
+            gsap.timeline({delay: 0.2})
+                .to(heroHeading, {opacity: 1, y: 0, duration: 0.8, ease: 'bounce.out'})
+                .to(heroLead, {opacity: 1, y: 0, duration: 0.7, ease: 'power2.out'}, '-=0.4')
+                .to(heroBtns, {opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: 'back.out(1.7)'}, '-=0.3');
+        }
+    }
+
+    // CARDS CASCADING IN (Programs, Art, Fitness, Services)
+    function gsapCascadeCards(sectionSelector, cardSelector) {
+        const section = document.querySelector(sectionSelector);
+        if (!section) return;
+        const cards = section.querySelectorAll(cardSelector);
+        if (!cards.length) return;
+        // Set initial state
+        gsap.set(cards, {opacity: 0, y: 60, scale: 0.96});
+        // Observer to trigger animation
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gsap.to(cards, {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        duration: 0.7,
+                        stagger: 0.12,
+                        ease: 'power3.out',
+                        overwrite: 'auto'
+                    });
+                    observer.disconnect();
+                }
+            });
+        }, {threshold: 0.15});
+        observer.observe(section);
+    }
+    // Programs
+    gsapCascadeCards('#programs', '.program-card');
+    // Services
+    gsapCascadeCards('#services', '.service-card');
+});
+
 // WhatsApp chatbot functionality
 function openWhatsApp() {
     const phoneNumber = '7483283045'; // Replace with your actual WhatsApp number

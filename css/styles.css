@@ -759,3 +759,275 @@ footer h5 {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-red);
 } 
+
+/* Modern Card Glassmorphism & Gradient Enhancements */
+.program-card, .service-card, .enquiry-form-container, .contact-info, .contact-form {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(60, 60, 60, 0.18);
+    border: 1.5px solid rgba(230, 57, 70, 0.12);
+    transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.program-card:hover, .service-card:hover, .enquiry-form-container:hover, .contact-info:hover, .contact-form:hover {
+    box-shadow: 0 16px 48px 0 rgba(230, 57, 70, 0.18);
+    border-color: var(--primary-red);
+    transform: translateY(-8px) scale(1.03);
+}
+
+/* Gradient Headings */
+h2.display-4, h3, h4, h5 {
+    background: linear-gradient(90deg, #e63946 30%, #dc3545 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Section Backgrounds */
+section {
+    position: relative;
+    z-index: 1;
+}
+section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    opacity: 0.08;
+    background: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'), linear-gradient(120deg, #e63946 0%, #fff 100%);
+    background-size: 300px 300px, cover;
+    background-repeat: repeat, no-repeat;
+}
+section.bg-light::before {
+    background: url('https://www.transparenttextures.com/patterns/diamond-upholstery.png'), linear-gradient(120deg, #fff 0%, #e63946 100%);
+    opacity: 0.06;
+}
+
+/* Button Enhancements */
+.btn-danger, .btn-outline-light, .btn-lg, .btn {
+    border-radius: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 16px rgba(230, 57, 70, 0.12);
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+.btn-danger {
+    background: linear-gradient(90deg, #e63946 0%, #dc3545 100%);
+    border: none;
+}
+.btn-danger:hover, .btn-danger:focus {
+    background: linear-gradient(90deg, #dc3545 0%, #e63946 100%);
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(230, 57, 70, 0.18);
+    transform: translateY(-2px) scale(1.04);
+}
+.btn-outline-light {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border: 2px solid #fff;
+}
+.btn-outline-light:hover, .btn-outline-light:focus {
+    background: #fff;
+    color: #e63946;
+    border: 2px solid #e63946;
+}
+
+/* Card Icon Glow */
+.card-icon, .service-icon {
+    box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.25), 0 4px 16px rgba(230, 57, 70, 0.10);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.program-card:hover .card-icon, .service-card:hover .service-icon {
+    box-shadow: 0 0 24px 4px rgba(230, 57, 70, 0.25), 0 8px 32px rgba(230, 57, 70, 0.18);
+    transform: scale(1.12) rotate(6deg);
+}
+
+/* Hero Section Heading Animation */
+.hero-section h1 {
+    background: linear-gradient(90deg, #fff 60%, #e63946 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-shadow: 0 4px 24px rgba(230, 57, 70, 0.12);
+    animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Subtle Section Divider */
+section:not(:last-child) {
+    border-bottom: 1.5px solid rgba(230, 57, 70, 0.08);
+    margin-bottom: 2rem;
+}
+
+/* Responsive Tweaks for Modern Look */
+@media (max-width: 768px) {
+    .program-card, .service-card, .enquiry-form-container, .contact-info, .contact-form {
+        border-radius: 16px;
+        padding: 1.5rem 1rem;
+    }
+    h2.display-4, h3, h4, h5 {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 576px) {
+    .program-card, .service-card, .enquiry-form-container, .contact-info, .contact-form {
+        border-radius: 10px;
+        padding: 1rem 0.5rem;
+    }
+    h2.display-4, h3, h4, h5 {
+        font-size: 1.1rem;
+    }
+} 
+
+/* Custom Animations */
+[data-aos="fade-zoom-in"] {
+    opacity: 0;
+    transform: scale(0.92) translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.23,1,0.32,1), transform 0.8s cubic-bezier(0.23,1,0.32,1);
+}
+[data-aos="fade-zoom-in"].aos-animate {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+[data-aos="slide-up"] {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.7s cubic-bezier(0.23,1,0.32,1), transform 0.7s cubic-bezier(0.23,1,0.32,1);
+}
+[data-aos="slide-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+[data-aos="rotate-in"] {
+    opacity: 0;
+    transform: rotateY(30deg) scale(0.9);
+    transition: opacity 0.7s cubic-bezier(0.23,1,0.32,1), transform 0.7s cubic-bezier(0.23,1,0.32,1);
+}
+[data-aos="rotate-in"].aos-animate {
+    opacity: 1;
+    transform: rotateY(0) scale(1);
+}
+[data-aos="zoom-in"] {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.7s cubic-bezier(0.23,1,0.32,1), transform 0.7s cubic-bezier(0.23,1,0.32,1);
+}
+[data-aos="zoom-in"].aos-animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Hero Section Parallax Optimization */
+.parallax-bg {
+    will-change: transform;
+    transition: transform 0.5s cubic-bezier(0.23,1,0.32,1);
+}
+
+/* Hero Button Enhanced Hover */
+.hero-btn-anim {
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+.hero-btn-anim::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.15) 0%, rgba(230,57,70,0.12) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+.hero-btn-anim:hover::after {
+    opacity: 1;
+}
+.hero-btn-anim:active {
+    transform: scale(0.97);
+}
+
+/* Card Image Hover Effect */
+.program-card .program-image img, .service-card .service-image img {
+    transition: transform 0.5s cubic-bezier(0.23,1,0.32,1), box-shadow 0.3s;
+    will-change: transform;
+}
+.program-card:hover .program-image img, .service-card:hover .service-image img {
+    transform: scale(1.08) rotate(-1deg);
+    box-shadow: 0 8px 32px rgba(230,57,70,0.12);
+}
+
+/* Performance: Reduce heavy effects on mobile */
+@media (max-width: 576px) {
+    [data-aos] {
+        transition-duration: 0.5s !important;
+    }
+    .program-card:hover .program-image img, .service-card:hover .service-image img {
+        transform: scale(1.03);
+    }
+} 
+
+/* Service Card Creative Hover Effect */
+.service-hover-anim {
+    transition: box-shadow 0.4s, border-color 0.4s, transform 0.4s;
+    border: 2px solid transparent;
+}
+.service-hover-anim:hover {
+    box-shadow: 0 12px 40px 0 rgba(230,57,70,0.18), 0 0 0 4px rgba(230,57,70,0.10);
+    border-color: #e63946;
+    transform: scale(1.04) rotate(-2deg);
+    z-index: 2;
+} 
+
+/* Form Button Animation */
+.form-btn-anim {
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+.form-btn-anim::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.12) 0%, rgba(230,57,70,0.10) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+.form-btn-anim:hover::after {
+    opacity: 1;
+}
+.form-btn-anim:hover, .form-btn-anim:focus {
+    box-shadow: 0 8px 32px rgba(230,57,70,0.18);
+    transform: scale(1.04);
+}
+.form-btn-anim:active {
+    transform: scale(0.97);
+}
+
+/* Form Input Animation */
+.form-anim {
+    transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+}
+.form-anim:focus {
+    border-color: #e63946;
+    box-shadow: 0 0 0 0.2rem rgba(230,57,70,0.15);
+    background: rgba(230,57,70,0.03);
+}
+.form-anim:hover {
+    border-color: #dc3545;
+    background: rgba(230,57,70,0.02);
+} 
+
+/* WhatsApp Chatbot Button Creative Hover */
+.chatbot-btn-anim {
+    transition: box-shadow 0.4s, transform 0.4s;
+}
+.chatbot-btn-anim:hover {
+    box-shadow: 0 0 24px 4px #25d366, 0 8px 32px rgba(37,211,102,0.18);
+    transform: scale(1.12) rotate(-6deg);
+} 
