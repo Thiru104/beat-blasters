@@ -18,40 +18,50 @@
     <link rel="stylesheet" href="css/styles.css">
     
     <style>
+        :root {
+            --primary-black: #181818;
+            --primary-red: #e63946;
+            --primary-white: #fff;
+            --primary-green: #28a745;
+            --shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+        }
         .thank-you-section {
             min-height: 100vh;
-            background: linear-gradient(135deg, var(--primary-black) 0%, #1a1a1a 50%, var(--primary-red) 100%);
+            background: linear-gradient(135deg, var(--primary-black) 0%, #232526 50%, var(--primary-red) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             overflow: hidden;
+            padding: 1rem;
         }
-        
         .thank-you-content {
             text-align: center;
             color: var(--primary-white);
             z-index: 2;
             position: relative;
+            background: rgba(24,24,24,0.85);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            padding: 4.5rem 2rem 2.5rem 2rem;
+            margin-top: 2rem;
         }
-        
         .success-icon {
             width: 120px;
             height: 120px;
-            background: #28a745;
+            background: var(--primary-green);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 2rem;
             animation: successPulse 2s infinite;
+            box-shadow: 0 0 32px 0 rgba(40,167,69,0.25);
         }
-        
         .success-icon i {
             font-size: 3rem;
             color: var(--primary-white);
         }
-        
         @keyframes successPulse {
             0% {
                 transform: scale(1);
@@ -66,60 +76,71 @@
                 box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
             }
         }
-        
         .thank-you-section h1 {
-            font-size: 3rem;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            color: var(--primary-white);
             font-weight: 800;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+            letter-spacing: 1px;
         }
-        
         .thank-you-section .lead {
-            font-size: 1.25rem;
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
             margin-bottom: 2rem;
-            opacity: 0.9;
+            opacity: 0.95;
+            color: var(--primary-white);
         }
-        
         .next-steps {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255,255,255,0.08);
             border-radius: 20px;
-            padding: 2rem;
-            margin: 2rem 0;
-            backdrop-filter: blur(10px);
+            padding: 2.2rem 1.5rem;
+            margin: 2.2rem 0;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 24px 0 rgba(230,57,70,0.08);
         }
-        
         .next-steps h3 {
             color: var(--primary-red);
             margin-bottom: 1.5rem;
+            font-weight: 700;
         }
-        
         .step-item {
             display: flex;
             align-items: center;
             margin-bottom: 1rem;
             text-align: left;
+            font-size: 1.1rem;
+            color: var(--primary-white);
         }
-        
         .step-item i {
             color: var(--primary-red);
             margin-right: 1rem;
             font-size: 1.2rem;
         }
-        
         .action-buttons {
-            margin-top: 2rem;
+            margin-top: 2.2rem;
         }
-        
         .action-buttons .btn {
             margin: 0.5rem;
             border-radius: 50px;
-            padding: 12px 30px;
-            font-weight: 600;
+            padding: 14px 36px;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: all 0.3s ease;
+            transition: all 0.25s cubic-bezier(.4,0,.2,1);
+            box-shadow: 0 2px 12px 0 rgba(230,57,70,0.08);
         }
-        
+        .action-buttons .btn-danger {
+            background: var(--primary-red);
+            border: none;
+        }
+        .action-buttons .btn-outline-light {
+            border: 2px solid var(--primary-white);
+        }
+        .action-buttons .btn:hover, .action-buttons .btn:focus {
+            box-shadow: 0 0 16px 2px var(--primary-red), 0 2px 12px 0 rgba(230,57,70,0.18);
+            transform: translateY(-2px) scale(1.04);
+            color: var(--primary-white) !important;
+        }
         .floating-shapes {
             position: absolute;
             top: 0;
@@ -129,71 +150,125 @@
             pointer-events: none;
             z-index: 1;
         }
-        
         .shape {
             position: absolute;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255,255,255,0.13);
             border-radius: 50%;
-            animation: float 6s infinite ease-in-out;
+            animation: float 7s infinite alternate ease-in-out;
         }
-        
         .shape-1 {
             width: 80px;
             height: 80px;
-            top: 20%;
-            left: 10%;
+            top: 18%;
+            left: 8%;
             animation-delay: 0s;
+            animation-duration: 8s;
         }
-        
         .shape-2 {
             width: 60px;
             height: 60px;
-            top: 60%;
-            right: 15%;
+            top: 62%;
+            right: 12%;
             animation-delay: 2s;
+            animation-duration: 6s;
         }
-        
         .shape-3 {
             width: 100px;
             height: 100px;
-            top: 30%;
-            right: 30%;
+            top: 28%;
+            right: 28%;
             animation-delay: 4s;
+            animation-duration: 10s;
         }
-        
         @keyframes float {
-            0%, 100% {
-                transform: translateY(0) rotate(0deg);
+            0% {
+                transform: translateY(0) rotate(0deg) scale(1);
             }
             33% {
-                transform: translateY(-20px) rotate(120deg);
+                transform: translateY(-30px) rotate(120deg) scale(1.08);
             }
             66% {
-                transform: translateY(-10px) rotate(240deg);
+                transform: translateY(-15px) rotate(240deg) scale(0.96);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg) scale(1);
             }
         }
-        
         @media (max-width: 768px) {
             .thank-you-section h1 {
+                font-size: clamp(1.5rem, 6vw, 2.2rem);
+            }
+            .thank-you-section .lead {
+                font-size: clamp(1rem, 3vw, 1.1rem);
+            }
+            .success-icon {
+                width: 90px;
+                height: 90px;
+            }
+            .success-icon i {
                 font-size: 2rem;
             }
-            
-            .thank-you-section .lead {
-                font-size: 1.1rem;
-            }
-            
-            .success-icon {
-                width: 100px;
-                height: 100px;
-            }
-            
-            .success-icon i {
-                font-size: 2.5rem;
-            }
-            
             .next-steps {
-                padding: 1.5rem;
+                padding: 1.2rem;
             }
+        }
+        /* WhatsApp Chatbot Button Styling */
+        .whatsapp-chatbot {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            animation: popIn 0.8s cubic-bezier(.4,2,.6,1) 0.5s backwards;
+        }
+        @keyframes popIn {
+            0% { opacity: 0; transform: scale(0.5) translateY(60px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .chatbot-button {
+            background: #25d366;
+            color: #fff;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 4px 24px 0 rgba(37,211,102,0.25);
+            cursor: pointer;
+            transition: box-shadow 0.2s, transform 0.2s;
+            border: none;
+        }
+        .chatbot-button:hover {
+            box-shadow: 0 0 24px 4px #25d366, 0 4px 24px 0 rgba(37,211,102,0.25);
+            transform: scale(1.08);
+        }
+        .chatbot-tooltip {
+            background: #232526;
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 16px;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            margin-right: 8px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s, transform 0.3s;
+            pointer-events: none;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
+        }
+        .whatsapp-chatbot:hover .chatbot-tooltip,
+        .chatbot-button:focus + .chatbot-tooltip {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Accessibility: Focus ring for buttons */
+        .btn:focus, .chatbot-button:focus {
+            outline: 2px solid var(--primary-red);
+            outline-offset: 2px;
         }
     </style>
 </head>
@@ -201,8 +276,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <i class="fas fa-music me-2"></i>BEAT BUSTERS
+            <a class="navbar-brand fw-bold" href="#home">
+                <img src="images/logo.png" alt="Beat Busters Logo" style="height: 70px; margin-right: 10px; vertical-align: middle;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -296,7 +371,7 @@
 
     <!-- WhatsApp Chatbot Button -->
     <div class="whatsapp-chatbot" id="whatsappChatbot">
-        <div class="chatbot-button" onclick="openWhatsApp()">
+        <div class="chatbot-button" tabindex="0" onclick="openWhatsApp()" aria-label="Chat with us on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </div>
         <div class="chatbot-tooltip">
@@ -309,5 +384,10 @@
     
     <!-- Custom JS -->
     <script src="js/scripts.js"></script>
+    <script>
+        function openWhatsApp() {
+            window.open('https://wa.me/917483283045?text=Hi%20Beat%20Busters%20Dance%20Center!%20I%20have%20an%20enquiry.', '_blank');
+        }
+    </script>
 </body>
 </html> 
