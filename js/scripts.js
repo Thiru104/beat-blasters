@@ -516,7 +516,126 @@ window.addEventListener('DOMContentLoaded', function() {
     gsapCascadeCards('#programs', '.program-card');
     // Services
     gsapCascadeCards('#services', '.service-card');
+    
+    // Initialize horizontal accordion
+    initializeHorizontalAccordion();
+    
+    // Initialize Instagram stories
+    initializeInstagramStories();
 });
+
+// Horizontal Accordion Functionality
+function initializeHorizontalAccordion() {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    
+    accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        
+        header.addEventListener('click', function() {
+            // Close all other accordion items
+            accordionItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+}
+
+// Instagram Stories Functionality
+let currentStoryIndex = 0;
+let storyInterval;
+const stories = document.querySelectorAll('.story-item');
+const indicators = document.querySelectorAll('.indicator');
+
+function initializeInstagramStories() {
+    if (stories.length === 0) return;
+    
+    // Auto-play stories
+    startStoryAutoPlay();
+    
+    // Add click event to indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            showStory(index);
+        });
+    });
+    
+    // Add touch/swipe support for mobile
+    let startX = 0;
+    let endX = 0;
+    
+    const storiesContainer = document.querySelector('.instagram-stories');
+    if (storiesContainer) {
+        storiesContainer.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+        
+        storiesContainer.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+    }
+}
+
+function showStory(index) {
+    // Hide all stories
+    stories.forEach(story => story.classList.remove('active'));
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    // Show current story
+    if (stories[index]) {
+        stories[index].classList.add('active');
+    }
+    if (indicators[index]) {
+        indicators[index].classList.add('active');
+    }
+    
+    currentStoryIndex = index;
+    
+    // Restart auto-play
+    startStoryAutoPlay();
+}
+
+function nextStory() {
+    const nextIndex = (currentStoryIndex + 1) % stories.length;
+    showStory(nextIndex);
+}
+
+function previousStory() {
+    const prevIndex = currentStoryIndex === 0 ? stories.length - 1 : currentStoryIndex - 1;
+    showStory(prevIndex);
+}
+
+function startStoryAutoPlay() {
+    // Clear existing interval
+    if (storyInterval) {
+        clearInterval(storyInterval);
+    }
+    
+    // Start new interval
+    storyInterval = setInterval(() => {
+        nextStory();
+    }, 5000); // Change story every 5 seconds
+}
+
+function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = startX - endX;
+    
+    if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+            // Swipe left - next story
+            nextStory();
+        } else {
+            // Swipe right - previous story
+            previousStory();
+        }
+    }
+}
 
 // WhatsApp chatbot functionality
 function openWhatsApp() {
