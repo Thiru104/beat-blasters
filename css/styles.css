@@ -648,7 +648,7 @@ footer h5 {
 
 @media (max-width: 576px) {
     .hero-section {
-        min-height: 70vh;
+        min-height: 85vh;
     }
     .hero-section h1 {
         font-size: 2rem;
