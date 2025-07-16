@@ -424,7 +424,7 @@ body {
 }
 
 .form-check-input:checked {
-    background-color: var(--primary-red);
+    background-color: var(--primary-white);
     border-color: var(--primary-red);
 }
 
